@@ -2,6 +2,8 @@ import { mixin, scope } from 'cssapi'
 import { injectGlobal } from 'styled-components'
 import styledNormalize from 'styled-normalize'
 import insetBorder from './mixins/insetBorder'
+import BrandonReg from '../../fonts/brandon/Brandon_reg.otf'
+import BrandonLight from '../../fonts/brandon/Brandon_light.otf'
 
 const globalStyles = api => () =>
   /* eslint-disable no-unused-expressions */
@@ -42,7 +44,7 @@ const globalStyles = api => () =>
       position:relative;
       z-index: 10;
       ${api({
-        background: `g:background`,
+        background: `g:background`
       })}
     }
 
@@ -50,11 +52,22 @@ const globalStyles = api => () =>
     /* Typography
     /* ---------------------------------------------------------------------- */
 
+    @font-face {
+      font-family: "Brandon-R";
+      src: url(${BrandonReg});
+      font-weight: 400;
+    }
+    @font-face {
+      font-family: "Brandon-L";
+      src: url(${BrandonLight});
+      font-weight: 100;
+    }
+
     body {
       word-spacing: -0.05em;
       ${api({
         fontFamily: `f:default`,
-        baseline: scope`s:body`,
+        baseline: scope`s:body`
       })}
     }
 
@@ -81,7 +94,7 @@ const globalStyles = api => () =>
 
     * + p {
       ${api({
-        marginTop: scope`1ru`,
+        marginTop: scope`1ru`
       })}
     }
 
@@ -98,8 +111,8 @@ const globalStyles = api => () =>
     h6 {
       ${api({
         baseline: scope`s:body`,
-        fontWeight: `bold`,
-        margin: 0,
+        fontWeight: `400`,
+        margin: 0
       })}
     }
 
@@ -138,7 +151,7 @@ const globalStyles = api => () =>
       ${api({
         borderRadius: scope`0.5ru`,
         padding: scope`1ru`,
-        background: `c:black`,
+        background: `c:black`
       })}
     }
 
