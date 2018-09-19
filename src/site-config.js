@@ -11,7 +11,7 @@ module.exports = {
     // Used in the site copyright
     owner: `Dennis Merkulov`,
     // Used for the main site title and in RSS Feed
-    title: `FORXTU`,
+    title: `ForX2`,
     // Used in RSS Feed
     description: `Blog about programming and everything`,
     url: `http://forxtu.xyz`,
@@ -21,7 +21,7 @@ module.exports = {
     showCredit: false,
     // Formatting for dates displayed across the site
     // For format see: http://momentjs.com/docs/#/displaying/format/
-    dateFormat: `Do MMMM YYYY`,
+    dateFormat: `Do MMMM YYYY`
   },
 
   // ---------------------------------------------------------------------------
@@ -30,35 +30,45 @@ module.exports = {
 
   metadata: {
     home: {
-      title: `Site / Home Page`,
+      title: `Home Page / FORXTU`,
       description: `The home page of the site`,
-      keywords: `home`,
+      keywords: `home`
     },
     about: {
-      title: `Site / About Page`,
+      title: `About Page / FORXTU`,
       description: `The about page of the site`,
-      keywords: `about`,
+      keywords: `about`
     },
     articles: {
-      title: `Site / Articles Page`,
+      title: `Articles Page / FORXTU`,
       description: `The Articles`,
-      keywords: `articles`,
+      keywords: `articles`
     },
     projects: {
-      title: `Site / Projects Page`,
+      title: `Projects Page / FORXTU`,
       description: `The Projects`,
-      keywords: `projects`,
+      keywords: `projects`
     },
     tag: {
-      title: `Tag: `,
+      title: ` Tag `,
       description: `Resources tagged with`,
-      keywords: `tags`,
+      keywords: `tags`
+    },
+    tags: {
+      title: `Tags / FORXTU`,
+      description: `Resources tags`,
+      keywords: `tags`
     },
     category: {
-      title: `Category: `,
+      title: ` Category `,
       description: `Resources in category`,
-      keywords: `categories`,
+      keywords: `categories`
     },
+    categories: {
+      title: `Categories / FORXTU`,
+      description: `Resources categories`,
+      keywords: `categories`
+    }
   },
 
   // ---------------------------------------------------------------------------
@@ -68,7 +78,7 @@ module.exports = {
   seo: {
     // Your Google Tracking ID, in the form: UA-000000-0
     // If you leave undefined, the tracking code will not be added
-    googleTrackingID: undefined,
+    googleTrackingID: undefined
   },
 
   // ---------------------------------------------------------------------------
@@ -92,11 +102,11 @@ module.exports = {
     pages: {
       home: {
         // Page title
-        title: `Welcome To The Home Page`,
+        title: `Featured articles`,
         // Title used for nav
         navTitle: `Home`,
         // Path used in URL
-        path: `/`,
+        path: `/`
       },
       about: {
         // Page title
@@ -104,14 +114,14 @@ module.exports = {
         // Title used for nav
         navTitle: `About`,
         // Path used in URL
-        path: `/about`,
+        path: `/about`
       },
       notFound: {
         // Page title
         title: `Page Not Found`,
         // Path used in URL
-        path: `/404`,
-      },
+        path: `/404`
+      }
     },
 
     // -------------------------------------------------------------------------
@@ -130,7 +140,7 @@ module.exports = {
         // Path used in URL
         path: `/articles`,
         // Paginate to this number of items per page
-        groupSize: 5,
+        groupSize: 5
       },
       // Configuration for projects
       projects: {
@@ -141,7 +151,7 @@ module.exports = {
         // Name of dir containing markdown docs
         directory: `projects`,
         // Path used in URL
-        path: `/projects`,
+        path: `/projects`
       },
       // Configuration for tags
       tags: {
@@ -150,9 +160,9 @@ module.exports = {
         // Title used for nav
         navTitle: `Tags`,
         // Path used in URL
-        path: `/tags`,
-      },
-    },
+        path: `/tags`
+      }
+    }
   },
 
   // ---------------------------------------------------------------------------
@@ -166,8 +176,8 @@ module.exports = {
       // hi-dpi screens.
       maxWidth: 1200,
       // JPG quality for images encoded for the site
-      quality: 60,
-    },
+      quality: 60
+    }
   },
 
   // ---------------------------------------------------------------------------
@@ -177,6 +187,6 @@ module.exports = {
   // Internal
   cli: {
     // Emojo used to prefix messages reported during build
-    emoji: `💀`,
-  },
+    emoji: `💀`
+  }
 }
