@@ -7,7 +7,7 @@ export default HomePage
 // Container, but Gatsby preprocesses the pages looking for a graphql call.
 // Moving it anywhere else results in an error.
 export const query = graphql`
-  query HomePageQuery {
+  query HomePageQuery($dateFormat: String) {
     markdownRemark(frontmatter: { slug: { eq: "home" } }) {
       htmlAst
       frontmatter {
@@ -34,6 +34,38 @@ export const query = graphql`
             home {
               title
             }
+          }
+        }
+      }
+    }
+    allMarkdownRemark(
+      sort: { fields: [fields___date], order: DESC }
+      filter: { fields: { type: { eq: "article" } } }
+      limit: 4
+    ) {
+      edges {
+        node {
+          excerpt(pruneLength: 170)
+          wordCount {
+            words
+          }
+          timeToRead
+          frontmatter {
+            image {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          fields {
+            category
+            author
+            date(formatString: $dateFormat)
+            tags
+            title
+            slug
           }
         }
       }
