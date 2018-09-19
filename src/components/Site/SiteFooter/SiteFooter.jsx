@@ -12,13 +12,13 @@ const Layout = styled(VLayout.withComponent(`footer`))`
   ${blockCenterH};
 
   ${api({
-    baseline: scope`s:smallprint`,
+    baseline: scope`s:smallprint`
   })};
 
   > * {
     min-width: 75%;
     ${api({
-      marginH: `auto`,
+      marginH: `auto`
     })};
   }
 `
@@ -33,7 +33,7 @@ const SiteFooter = ({ owner, startYear, showCredit }) => (
 SiteFooter.propTypes = {
   owner: PropTypes.string.isRequired,
   startYear: PropTypes.string.isRequired,
-  showCredit: PropTypes.bool.isRequired,
+  showCredit: PropTypes.bool.isRequired
 }
 
 export default SiteFooter

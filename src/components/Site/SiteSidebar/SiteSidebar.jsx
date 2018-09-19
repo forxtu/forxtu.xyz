@@ -21,7 +21,7 @@ const Layout = styled(VLayout)`
   justify-content: flex-start;
   align-items: flex-start;
   height: 100vh;
-  background: #fafafa;
+  border-right: 2px solid #f6f5f3;
   width: 320px;
   transition: 0.3s;
   transform: ${props =>

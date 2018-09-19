@@ -7,7 +7,7 @@ export default styled.div`
   ${blockCenterH};
   padding-top: 10px;
   ${api({
-    fontFamily: `f:title`,
+    fontFamily: `Limelight`,
     baseline: scope`s:primaryTitle`
   })};
 `
