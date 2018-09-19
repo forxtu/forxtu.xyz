@@ -23,6 +23,6 @@ export const pluralise = (name, number = 2) =>
 export const pluraliseWithNumber = (name, number = 2) =>
   `${number} ${pluralise(name, number)}`
 
-export const tagTitle = tag => `Tag: ${tag}`
+export const tagTitle = tag => `Filtered By Tag - ${tag}`
 
-export const categoryTitle = category => `Category: ${category}`
+export const categoryTitle = category => `Filtered By Category - ${category}`

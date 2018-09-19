@@ -4,7 +4,7 @@ import React from 'react'
 const renderListItems = (Component, dataProp, data) =>
   mapIndexed((dataItem, key) => {
     const props = {
-      [dataProp]: dataItem,
+      [dataProp]: dataItem
     }
     return (
       <li key={key}>
