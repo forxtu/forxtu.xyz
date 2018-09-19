@@ -9,19 +9,16 @@ import BaseLink from './BaseLink'
 // eslint-disable-next-line no-unused-vars
 const TextLink = styled(({ underlineType, ...rest }) => <BaseLink {...rest} />)`
   ${linkProps(`c:text`, `c:highlight`)};
-  font-weight: bold;
-  position: relative;
-  display: inline-block;
 `
 
 TextLink.propTypes = {
   to: PropTypes.string,
   children: PropTypes.node.isRequired,
-  underlineType: PropTypes.string,
+  underlineType: PropTypes.string
 }
 
 TextLink.defaultProps = {
-  underlineType: `center`,
+  underlineType: `center`
 }
 
 TextLink.displayName = `TextLink`
