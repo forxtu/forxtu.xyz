@@ -2,7 +2,9 @@ import { api, scope } from 'cssapi'
 import PropTypes from 'prop-types'
 import React from 'react'
 import styled from 'styled-components'
+
 import ArrowButtonLink from '../shared/links/ArrowButtonLink'
+import PaginationLink from '../shared/links/PaginationLink'
 import DisabledArrowButtonLink from '../shared/links/DisabledArrowButtonLink'
 import flexHorizontal from '../styles/mixins/flexHorizontal'
 
@@ -13,36 +15,39 @@ const Layout = styled.nav`
   justify-content: space-between;
   ${flexHorizontal};
 
-  ${LayoutNext}, ${LayoutPrevious} {
-    ${api({
-      width: scope`calc(50% - 0.5ru)`,
-    })};
+  ${LayoutNext} {
+    justify-content: flex-end;
+  }
+
+  ${LayoutPrevious} {
+    justify-content: flex-start;
   }
 `
+// ${LayoutNext}, ${LayoutPrevious} {
+//   ${api({
+//     width: scope`calc(50% - 0.5ru)`
+//   })};
+// }
 
 const previousPathLink = (previousPath, label) =>
   previousPath ? (
-    <ArrowButtonLink to={previousPath} direction="left">
-      {label}
-    </ArrowButtonLink>
+    <PaginationLink to={previousPath}>{label}</PaginationLink>
   ) : (
-    <DisabledArrowButtonLink direction="left">{label}</DisabledArrowButtonLink>
+    <PaginationLink disabled>{label}</PaginationLink>
   )
 
 const nextPathLink = (nextPath, label) =>
   nextPath ? (
-    <ArrowButtonLink to={nextPath} direction="right">
-      {label}
-    </ArrowButtonLink>
+    <PaginationLink to={nextPath}>{label}</PaginationLink>
   ) : (
-    <DisabledArrowButtonLink direction="right">{label}</DisabledArrowButtonLink>
+    <PaginationLink disabled>{label}</PaginationLink>
   )
 
 const NextPreviousNav = ({
   previousPath,
   nextPath,
   previousLabel,
-  nextLabel,
+  nextLabel
 }) => (
   <Layout>
     <LayoutPrevious>
@@ -56,14 +61,14 @@ NextPreviousNav.propTypes = {
   previousPath: PropTypes.string,
   nextPath: PropTypes.string,
   previousLabel: PropTypes.string,
-  nextLabel: PropTypes.string,
+  nextLabel: PropTypes.string
 }
 
 NextPreviousNav.defaultProps = {
   previousPath: null,
   nextPath: null,
   previousLabel: `Previous`,
-  nextLabel: `Next`,
+  nextLabel: `Next`
 }
 
 export default NextPreviousNav
