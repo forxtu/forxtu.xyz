@@ -3,7 +3,7 @@ title: 'Welcome To The Home Page'
 slug: 'home'
 description:
   Sed nisi dolor, fringilla et consectetur eu, viverra vulputate felis. Ut est ex, ornare vitae dictum quis, egestas et est. Nam rhoncus purus eu justo feugiat, a venenatis enim ultricies. Mauris tristique elementum leo a viverra. Ut placerat, ex nec vestibulum iaculis, nibh ante sollicitudin elit, non aliquet nunc neque ac sapien. Aenean iaculis vulputate facilisis. Suspendisse elit purus, iaculis.
-keywords: keyword 6, keyword 7
+? keywords
 ---
 
 This is the home page. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
