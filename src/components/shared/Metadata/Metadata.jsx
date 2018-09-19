@@ -8,12 +8,12 @@ const Metadata = ({ title, description, keywords }) => (
     meta={[
       {
         name: `description`,
-        content: description,
+        content: description
       },
       {
         name: `keywords`,
-        content: keywords,
-      },
+        content: keywords
+      }
     ]}
   />
 )
@@ -21,11 +21,11 @@ const Metadata = ({ title, description, keywords }) => (
 Metadata.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  keywords: PropTypes.string,
+  keywords: PropTypes.string
 }
 
 Metadata.defaultProps = {
-  keywords: ``,
+  keywords: ``
 }
 
 export default Metadata

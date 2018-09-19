@@ -1,4 +1,4 @@
-import { api } from 'cssapi'
+import { api, scope } from 'cssapi'
 import Img from 'gatsby-image'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
@@ -7,7 +7,7 @@ import styled from 'styled-components'
 import {
   fieldsSlug,
   fieldsTitle,
-  frontmatterImageSizes,
+  frontmatterImageSizes
 } from '../../../helpers/markdown'
 import VLayout from '../../../shared/layouts/VLayout'
 import TextLink from '../../../shared/links/TextLink'
@@ -17,17 +17,19 @@ import spaceChildrenV from '../../../styles/mixins/spaceChildrenV'
 import ArticleFooterMeta from '../../ArticleFooterMeta'
 import ArticleHeadMeta from '../../ArticleHeadMeta'
 
-const Layout = styled.ul`
+const Layout = styled.div`
   display: flex;
   ${api({
     flexDirection: [`column`, `column`, `row`],
+    // marginTop: scope`1ru`,
+    marginBottom: scope`0.5ru`
   })};
   ${spaceChildrenH([0, 0, `1ru`])};
   ${spaceChildrenV([`1ru`, `1ru`, 0])};
 
   > * :first-child {
     ${api({
-      flex: [`0 0 100%`, `0 0 100%`, `0 0 33.3%`],
+      flex: [`0 0 100%`, `0 0 100%`, `0 0 33.3%`]
     })};
   }
 `
@@ -52,7 +54,7 @@ const ArticlesListItem = ({ article }) => {
 }
 
 ArticlesListItem.propTypes = {
-  article: PropTypes.object.isRequired,
+  article: PropTypes.object.isRequired
 }
 
 export default ArticlesListItem

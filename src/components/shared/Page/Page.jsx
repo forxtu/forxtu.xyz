@@ -29,9 +29,9 @@ const PageTitle = styled(TitlePrimary)`
 const Page = ({ title, children, imageSizes, nav }) => (
   <DefaultLayout>
     <VLayout>
-      {imageSizes && <Img fluid={imageSizes} />}
       <Body>
         <PageTitle>{title}</PageTitle>
+        {imageSizes && <Img fluid={imageSizes} />}
         {children}
       </Body>
       {nav && <NavWrapper>{nav}</NavWrapper>}

@@ -10,11 +10,11 @@ const TagList = ({ tags }) => {
 }
 
 TagList.propTypes = {
-  tags: PropTypes.array,
+  tags: PropTypes.array
 }
 
 TagList.defaultProps = {
-  tags: [],
+  tags: []
 }
 
 export default TagList

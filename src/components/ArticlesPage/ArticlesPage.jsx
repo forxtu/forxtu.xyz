@@ -5,7 +5,7 @@ import { pagination, pluralise } from '../helpers/formatting'
 import { markdownItemNodes } from '../helpers/markdown'
 import {
   articlesPageMetadata,
-  articlesResourceTitle,
+  articlesResourceTitle
 } from '../helpers/siteMetadata'
 import Articles from '../shared/Articles'
 import Metadata from '../shared/Metadata'
@@ -31,6 +31,7 @@ const ArticlesPage = ({ data, pageContext }) => {
   return (
     <Page title={pluralise(articlesResourceTitle(data))} nav={nav}>
       <Metadata {...articlesPageMetadata(data)} />
+      {console.log(pageContext)}
       <Meta>{pagination(pageContext)}</Meta>
       <Articles articles={markdownItemNodes(data)} pagination={pageContext} />
     </Page>
@@ -38,7 +39,7 @@ const ArticlesPage = ({ data, pageContext }) => {
 }
 ArticlesPage.propTypes = {
   data: PropTypes.object.isRequired,
-  pageContext: PropTypes.object.isRequired,
+  pageContext: PropTypes.object.isRequired
 }
 
 export default ArticlesPage

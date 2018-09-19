@@ -5,7 +5,7 @@ import { markdownItemNodes } from '../helpers/markdown'
 import { addTitleToMetadata } from '../helpers/metadata'
 import {
   articlesResourceTitle,
-  categoryPageMetadata,
+  categoryPageMetadata
 } from '../helpers/siteMetadata'
 import Metadata from '../shared/Metadata'
 import Page from '../shared/Page/Page'
@@ -27,7 +27,7 @@ const CategoryPage = ({ data, pageContext }) => {
             articlesResourceTitle(data),
             articles.length
           )} filed in`,
-          category,
+          category
         ]}
       />
     </Page>
@@ -36,7 +36,7 @@ const CategoryPage = ({ data, pageContext }) => {
 
 CategoryPage.propTypes = {
   data: PropTypes.object.isRequired,
-  pageContext: PropTypes.object.isRequired,
+  pageContext: PropTypes.object.isRequired
 }
 
 export default CategoryPage
