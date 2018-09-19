@@ -6,7 +6,7 @@ import React from 'react'
 import RehypeReact from 'rehype-react'
 import styled, { withTheme } from 'styled-components'
 import spaceChildrenV from '../styles/mixins/spaceChildrenV'
-import Blockquote from './Blockquote'
+import Blockquote from './BlockQuote'
 import Cite from './Cite'
 import FootnoteRef from './Footnotes/FootnoteRef'
 import Footnotes from './Footnotes/Footnotes'
@@ -77,8 +77,8 @@ const renderAst = (theme, ast) =>
       a: resolveAnchor(theme),
       hr: HorizontalRule,
       div: resolveDiv(theme),
-      table: Table,
-    },
+      table: Table
+    }
   }).Compiler(ast)
 
 const PageText = styled.div`
@@ -90,13 +90,13 @@ const PageText = styled.div`
     font-weight: bold;
 
     ${api({
-      baseline: scope`s:lede`,
+      baseline: scope`s:lede`
     })};
   }
 
   ${Blockquote}, ${OrderedList}, ${UnorderedList} {
     ${api({
-      marginH: scope`1ru`,
+      marginH: scope`1ru`
     })};
   }
 `
@@ -105,7 +105,7 @@ const MarkdownContent = ({ htmlAst, theme }) => (
 )
 MarkdownContent.propTypes = {
   htmlAst: PropTypes.object.isRequired,
-  theme: PropTypes.object.isRequired,
+  theme: PropTypes.object.isRequired
 }
 
 export default withTheme(MarkdownContent)
