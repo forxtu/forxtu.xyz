@@ -15,8 +15,8 @@ const createTagPage = (tag, createPage) => {
         path: slug,
         component: path.resolve(TAG_TEMPLATE_PATH),
         context: {
-          tag,
-        },
+          tag
+        }
       })
     } catch (error) {
       reject(error)

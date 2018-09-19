@@ -4,7 +4,7 @@ const { reportCreatePageSuccess } = require(`../utils/reporter`)
 const { throwBuildError } = require(`../utils/errors`)
 const {
   collectUniqueCategories,
-  toCategorySlug,
+  toCategorySlug
 } = require(`../utils/categories`)
 const { CATEGORY_TEMPLATE_PATH } = require(`../const/templatePaths`)
 const queryMarkdownNodesByDir = require(`../queries/queryMarkdownNodesByDir`)
@@ -19,8 +19,8 @@ const createCategoryPage = (category, categories, createPage) => {
         path: slug,
         component: path.resolve(CATEGORY_TEMPLATE_PATH),
         context: {
-          category,
-        },
+          category
+        }
       })
     } catch (error) {
       reject(error)

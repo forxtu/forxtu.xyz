@@ -16,8 +16,8 @@ const createProjectsPage = (graphql, createPage, projectDir, projectPath) =>
         component: path.resolve(PROJECTS_TEMPLATE_PATH),
         context: {
           projects: edges,
-          projectsCount,
-        },
+          projectsCount
+        }
       })
       reportCreatePageSuccess(`Projects`, projectPath)
       return Promise.resolve()

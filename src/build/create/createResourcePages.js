@@ -6,7 +6,7 @@ const { reportCreatePageSuccess } = require(`../utils/reporter`)
 const {
   markdownEdges,
   pluckNodes,
-  slugOfItemAtIndex,
+  slugOfItemAtIndex
 } = require(`../utils/resources`)
 const queryMarkdownNodesByDir = require(`../queries/queryMarkdownNodesByDir`)
 
@@ -19,8 +19,8 @@ const createResourcePage = (slug, idx, nodes, createPage, name, template) =>
         context: {
           slug,
           previousSlug: slugOfItemAtIndex(idx - 1, nodes),
-          nextSlug: slugOfItemAtIndex(idx + 1, nodes),
-        },
+          nextSlug: slugOfItemAtIndex(idx + 1, nodes)
+        }
       })
     } catch (error) {
       reject(error)

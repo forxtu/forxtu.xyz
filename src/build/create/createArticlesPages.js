@@ -29,8 +29,8 @@ const createArticlesPage = (createPage, groupSize, articlesPath, total) => (
     path: pagePath,
     component: resolve(ARTICLES_TEMPLATE_PATH),
     context: {
-      ...pagination,
-    },
+      ...pagination
+    }
   })
   reportCreatePaginatedPageSuccess(
     `Articles`,
