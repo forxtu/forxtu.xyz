@@ -4,22 +4,22 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi'
-
 import VLayout from '../../shared/layouts/VLayout'
-import SiteLogoLink from './SiteLogoLink'
+
 import SiteSidebarToggler from './SiteSidebarToggler'
 import SiteNav from './SiteNav'
 import SiteTitle from './SiteTitle'
+import SiteSocial from './SiteSocial/SiteSocial'
 
 const Header = styled.div``
+const Wrapper = styled.div``
 
 const Layout = styled(VLayout)`
   align-items: center;
   position: fixed;
   display: flex;
   left: 0;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: space-between;
   height: 100vh;
   border-right: 2px solid #f6f5f3;
   width: 320px;
@@ -31,22 +31,28 @@ const Layout = styled(VLayout)`
   })};
 
   ${Header} {
+    justify-content: center;
     ${api({
       width: [60, 70, 80]
     })};
+  }
+  ${Wrapper} {
+    justify-content: center;
   }
 `
 
 const SiteSidebar = ({ title, pages, setSidebarShape, isSidebarOpen }) => (
   <Layout spacing="small" isSidebarOpen={isSidebarOpen}>
-    {/* <Header>
-      <SiteLogoLink />
-    </Header> */}
     <SiteSidebarToggler onClick={setSidebarShape}>
       {isSidebarOpen ? <FiChevronLeft /> : <FiChevronRight />}
     </SiteSidebarToggler>
-    <SiteTitle>{title}</SiteTitle>
-    <SiteNav pages={pages} />
+    <Header>
+      <SiteTitle title={title} isSidebarOpen={isSidebarOpen} />
+      <SiteNav pages={pages} />
+    </Header>
+    <Wrapper>
+      <SiteSocial />
+    </Wrapper>
   </Layout>
 )
 

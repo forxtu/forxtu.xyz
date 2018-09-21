@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import { api, scope } from 'cssapi'
 
 const SiteSidebarToggler = styled.div`
   left: 318px;
@@ -13,7 +14,9 @@ const SiteSidebarToggler = styled.div`
   justify-content: center;
   font-size: 1.5em;
   :hover {
-    background-color: #f3f3f3;
+    ${api({
+      backgroundColor: `c:veryLightGrey`
+    })};
   }
 `
 

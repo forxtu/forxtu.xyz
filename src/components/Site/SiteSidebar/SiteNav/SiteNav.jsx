@@ -3,9 +3,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import styled from 'styled-components'
 
-import banner from '../../../styles/mixins/banner'
 import flexVertical from '../../../styles/mixins/flexVertical'
-import spaceChildrenH from '../../../styles/mixins/spaceChildrenH'
 import uiList from '../../../styles/mixins/uiList'
 
 import SiteNavLink from './SiteNavLink/SiteNavLink'
@@ -18,9 +16,9 @@ const Layout = styled.div`
   position: relative;
   z-index: 99;
   align-items: center;
-  width: 320px;
   ${api({
-    padding: [`0.2ru`, `0.25ru 1.25ru`],
+    marginTop: [`1ru`],
+    padding: [`0.2ru`, `0.25ru 1.25ru`]
   })};
 `
 
@@ -36,7 +34,7 @@ const SiteNav = ({ pages }) => (
 )
 
 SiteNav.propTypes = {
-  pages: PropTypes.object.isRequired,
+  pages: PropTypes.object.isRequired
 }
 
 export default SiteNav
