@@ -8,7 +8,7 @@ import {
   markdownItemMetadata,
   markdownItemTitle,
   next,
-  previous,
+  previous
 } from '../helpers/markdown'
 import Metadata from '../shared/Metadata'
 import NextPreviousNav from '../shared/NextPreviousNav'
@@ -32,15 +32,14 @@ const ArticlePage = ({ data }) => {
     <Page
       title={markdownItemTitle(data)}
       imageSizes={markdownItemImageSizes(data)}
-      nav={nav}
     >
       <Metadata {...markdownItemMetadata(data)} />
-      <Article article={markdownItem(data)} />
+      <Article allData={data} article={markdownItem(data)} nav={nav} />
     </Page>
   )
 }
 ArticlePage.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired
 }
 
 export default ArticlePage

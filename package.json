@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "cssapi": "0.9.7",
+    "disqus-react": "^1.0.5",
     "fs": "0.0.1-security",
     "object-assign": "^4.1.1",
     "ramda": "^0.25.0",
