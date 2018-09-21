@@ -22,6 +22,7 @@ import VLayout from '../../shared/layouts/VLayout'
 import ActionBarGroup from './ActionBarGroup'
 import ActionBarButton from './ActionBarButton'
 import ActionBarButtonLink from './ActionBarButtonLink'
+import SupportButton from '../../shared/SupportButton'
 
 const Layout = styled(VLayout)`
   align-items: center;
@@ -73,6 +74,9 @@ class SiteActionBar extends Component {
             >
               <FiArrowUp />
             </ScrollToTop>
+          </ActionBarButton>
+          <ActionBarButton>
+            <SupportButton title="Buy me a coffee" />
           </ActionBarButton>
           {screenfull.enabled && (
             <ActionBarButton>

@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import styled from 'styled-components'
+import { api } from 'cssapi'
 
 import linkProps from '../../styles/mixins/linkProps'
 import BaseLink from '../../shared/links/BaseLink'
@@ -16,6 +17,11 @@ const ActionBarButtonLink = styled(({ underlineType, ...rest }) => <BaseLink {..
   margin-top: 10px;
   color: #000;
   font-size: 18px;
+  :hover {
+    ${api({
+      color: `c:highlight`
+    })}
+  }
 `
 
 ActionBarButtonLink.propTypes = {

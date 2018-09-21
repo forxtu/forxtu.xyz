@@ -2,11 +2,14 @@ import { api } from 'cssapi'
 import PropTypes from 'prop-types'
 import React from 'react'
 import styled from 'styled-components'
-import banner from '../../../styles/mixins/banner'
+import SupportButton from '../../../shared/SupportButton'
+import flexAlignCenter from '../../../styles/mixins/flexAlignCenter'
 
-const Layout = styled.p`
+const Layout = styled.span`
+  ${flexAlignCenter};
   position: relative;
   text-align: center;
+  justify-content: center;
   ${api({
     padding: [`0.5ru 2ru`, `1ru 2ru`]
   })};
@@ -14,7 +17,9 @@ const Layout = styled.p`
 
 const Copyright = ({ owner, dateRange }) => (
   <Layout>
-    Created with love by {owner} {dateRange}
+    Created with <SupportButton title="love and support of coffee" /> by {owner}
+    {` `}
+    {dateRange}
   </Layout>
 )
 
