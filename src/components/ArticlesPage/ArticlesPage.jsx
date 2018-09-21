@@ -31,7 +31,6 @@ const ArticlesPage = ({ data, pageContext }) => {
   return (
     <Page title={pluralise(articlesResourceTitle(data))} nav={nav}>
       <Metadata {...articlesPageMetadata(data)} />
-      {console.log(pageContext)}
       <Meta>{pagination(pageContext)}</Meta>
       <Articles articles={markdownItemNodes(data)} pagination={pageContext} />
     </Page>

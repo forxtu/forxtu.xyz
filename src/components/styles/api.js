@@ -57,10 +57,11 @@ const config = {
       offBlack: `#222`,
       white: `#fff`,
       offWhite: `#EFEFEF`,
+      darkGrey: `#888`,
+      semiGrey: `#666`,
+      grey: `#a0a0a0`,
       lightGrey: `#E4E4E4`,
       veryLightGrey: `#f6f5f3`,
-      grey: `#a0a0a0`,
-      darkGrey: `#888`,
       red: `#EA421B`,
       green: `#4fc08d`,
       // Aliases

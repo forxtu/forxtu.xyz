@@ -90,6 +90,13 @@ const globalStyles = api => () =>
       margin: 0;
       padding: 0;
       max-width: 60em;
+      letter-spacing: 0.6px;
+      ${api({
+        // baseline: scope`s:body`,
+        color: `c:semiGrey`
+      })}
+      line-height: 1.7 !important;
+      font-size: 19px !important;
     }
 
     * + p {

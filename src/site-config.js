@@ -11,7 +11,7 @@ module.exports = {
     // Used in the site copyright
     owner: `Dennis Merkulov`,
     // Used for the main site title and in RSS Feed
-    title: `ForX2`,
+    title: `FX2`,
     // Used in RSS Feed
     description: `Blog about programming and everything`,
     url: `http://forxtu.xyz`,

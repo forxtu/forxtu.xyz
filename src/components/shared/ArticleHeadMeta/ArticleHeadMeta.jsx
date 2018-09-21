@@ -14,12 +14,12 @@ import {
 } from '../../helpers/markdown'
 import VLayout from '../layouts/VLayout'
 
-const TopHead = styled.p`
+const TopHead = styled.span`
   ${api({
     color: `c:black`
   })};
 `
-const BotHead = styled.p`
+const BotHead = styled.span`
   ${flexAlignCenter};
   ${api({
     color: `c:grey`,
