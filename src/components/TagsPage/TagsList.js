@@ -27,7 +27,7 @@ class TagsList extends Component {
   componentDidMount() {
     // const tagsData = this.splitByComa(this.getAllInOneArray);
     // const tagsData = this.result();
-    this.result();
+    this.fetchAndPushTags();
     // this.props.pushTagsToList(uniq(tagsData));
   }
 
@@ -49,7 +49,7 @@ class TagsList extends Component {
     return arrayOfTags;
   }
 
-  async result() {
+  async fetchAndPushTags() {
     const splittedByComa = await this.splitByComa();
     const tagsData = await this.getAllInOneArray(splittedByComa);
     this.props.pushTagsToList(uniq(tagsData));
