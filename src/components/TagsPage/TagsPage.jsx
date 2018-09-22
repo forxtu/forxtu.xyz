@@ -14,7 +14,8 @@ import { tagPath } from '../../build/utils/url'
 
 import Metadata from '../shared/Metadata'
 import Page from '../shared/Page/Page'
-import TagList from '../shared/TagList'
+// import TagList from '../shared/TagList'
+import TagsList from './TagsList'
 import TextLink from '../shared/links/TextLink'
 
 const TagsPage = ({ data }) => {
@@ -23,19 +24,7 @@ const TagsPage = ({ data }) => {
   return (
     <Page title={pluralise(tagsResourceTitle(data))}>
       <Metadata {...tagsMetadata} />
-      {/* <TagList tags={tags} /> */}
-      <ul>
-        {allTags.map(
-          tag =>
-            tag.fieldValue !== `null` && tag.fieldValue !== `project` ? (
-              <li key={tag.fieldValue}>
-                <TextLink to={tagPath(tag.fieldValue)}>
-                  {tag.fieldValue} ({tag.totalCount})
-                </TextLink>
-              </li>
-            ) : null
-        )}
-      </ul>
+      <TagsList allTags={allTags} />
     </Page>
   )
 }

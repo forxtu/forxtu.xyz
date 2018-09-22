@@ -27,7 +27,11 @@ export const query = graphql`
         }
       }
     }
-    allMarkdownRemark(limit: 2000) {
+    allMarkdownRemark(
+      sort: { fields: [fields___date], order: DESC }
+      filter: { fields: { type: { eq: "article" } } }
+      limit: 2000
+    ) {
       group(field: frontmatter___keywords) {
         fieldValue
         totalCount
