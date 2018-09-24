@@ -1,14 +1,16 @@
 import { api, scope } from 'cssapi'
-import { object, string, func, bool } from 'prop-types'
+import { object, string, func, bool, array } from 'prop-types'
 import React from 'react'
 import styled from 'styled-components'
 
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi'
+
 import VLayout from '../../shared/layouts/VLayout'
 
 import SiteSidebarToggler from './SiteSidebarToggler'
 import SiteNav from './SiteNav'
 import SiteTitle from './SiteTitle'
+import SiteTags from './SiteTags/SiteTags'
 import SiteSocial from './SiteSocial/SiteSocial'
 
 const Header = styled.div``
@@ -19,6 +21,7 @@ const Layout = styled(VLayout)`
   position: fixed;
   display: flex;
   left: 0;
+  padding: 0 20px 20px 20px !important;
   justify-content: space-between;
   height: 100vh;
   border-right: 2px solid #f6f5f3;
@@ -41,7 +44,13 @@ const Layout = styled(VLayout)`
   }
 `
 
-const SiteSidebar = ({ title, pages, setSidebarShape, isSidebarOpen }) => (
+const SiteSidebar = ({
+  title,
+  pages,
+  setSidebarShape,
+  isSidebarOpen,
+  tags
+}) => (
   <Layout spacing="small" isSidebarOpen={isSidebarOpen}>
     <SiteSidebarToggler onClick={setSidebarShape}>
       {isSidebarOpen ? <FiChevronLeft /> : <FiChevronRight />}
@@ -50,6 +59,9 @@ const SiteSidebar = ({ title, pages, setSidebarShape, isSidebarOpen }) => (
       <SiteTitle title={title} isSidebarOpen={isSidebarOpen} />
       <SiteNav pages={pages} />
     </Header>
+    <Wrapper>
+      <SiteTags tags={tags} />
+    </Wrapper>
     <Wrapper>
       <SiteSocial />
     </Wrapper>
@@ -60,7 +72,8 @@ SiteSidebar.propTypes = {
   title: string.isRequired,
   pages: object.isRequired,
   isSidebarOpen: bool.isRequired,
-  setSidebarShape: func.isRequired
+  setSidebarShape: func.isRequired,
+  tags: array.isRequired
 }
 
 export default SiteSidebar

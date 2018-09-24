@@ -4,14 +4,14 @@ import { test } from 'ramda'
 import React from 'react'
 import styled from 'styled-components'
 import { isHomePage } from '../../../../helpers/paths'
-import Button from '../../../../shared/links/ButtonLink'
+import TextLink from '../../../../shared/links/TextLink'
 import linkProps from '../../../../styles/mixins/linkProps'
 
 const articlesIsActive = (match, location) =>
   match || test(/(categories|tags)/, location.pathname)
 
-const Link = styled(Button).attrs({
-  activeClassName: `isActive`,
+const Link = styled(TextLink).attrs({
+  activeClassName: `isActive`
 })`
   ${linkProps(`c:text`, `c:highlight`)};
   background: transparent;
@@ -20,7 +20,7 @@ const Link = styled(Button).attrs({
 
   &.isActive {
     ${api({
-      color: `c:active`,
+      color: `c:active`
     })};
   }
 `
@@ -35,7 +35,7 @@ const SiteNavLink = ({ page }) => {
 }
 
 SiteNavLink.propTypes = {
-  page: PropTypes.object.isRequired,
+  page: PropTypes.object.isRequired
 }
 
 export default SiteNavLink

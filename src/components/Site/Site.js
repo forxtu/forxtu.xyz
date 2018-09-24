@@ -1,6 +1,6 @@
 import { api, scope } from 'cssapi'
 import { func, object, bool } from 'prop-types'
-import { merge } from 'ramda'
+import { merge, lensProp, view, compose, uniq } from 'ramda'
 import React from 'react'
 import styled from 'styled-components'
 import { connect } from 'react-redux'
@@ -16,6 +16,7 @@ import flexVertical from '../styles/mixins/flexVertical'
 import SiteBody from './SiteBody'
 import SiteFooter from './SiteFooter'
 import SiteSidebar from './SiteSidebar'
+import SiteHeader from './SiteHeader'
 import SiteActionBar from './SiteActionBar'
 
 export const Header = styled.div``
@@ -32,6 +33,10 @@ const Layout = styled.div`
     maxWidth: 1100,
     minWidth: 300
   })};
+
+  ${Header} {
+    display: flex;
+  }
 
   ${Header}, ${Footer} {
     flex: 0 0 auto;
@@ -56,16 +61,20 @@ const Site = props => {
     structure: { pages, resources }
   } = data.site.siteMetadata
 
+  const { categoriesGroup, keywordsGroup } = data.allMarkdownRemark;
+
   const pagesData = merge(pages, resources)
 
   return (
     <Layout isSidebarOpen={isSidebarOpen}>
       <Header>
+        <SiteHeader categoriesGroup={categoriesGroup} />
         <SiteSidebar
           title={title}
           pages={pagesData}
           isSidebarOpen={isSidebarOpen}
           setSidebarShape={setSidebarShape}
+          tags={keywordsGroup}
         />
         <SiteActionBar />
       </Header>

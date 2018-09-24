@@ -16,8 +16,8 @@ const ArticlesList = () => {
     { name: `github`, url: `https://github.com/forxtu`, comp: FiGithub },
     { name: `linkedin`, url: `https://www.linkedin.com/in/forxtu/`, comp: FiLinkedin },
     { name: `twitter`, url: `https://www.twitter.com/forxtu/`, comp: FiTwitter },
-    { name: `fb`, url: `https://www.facebook.com/forxtu/`, comp: FiFacebook },
-    { name: `inst`, url: `https://www.instagram.com/forxtu/`, comp: FiInstagram }
+    { name: `facebook`, url: `https://www.facebook.com/forxtu/`, comp: FiFacebook },
+    { name: `instagram`, url: `https://www.instagram.com/forxtu/`, comp: FiInstagram }
   ];
 
   return(

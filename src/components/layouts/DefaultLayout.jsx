@@ -17,6 +17,16 @@ const DefaultLayout = ({ children }) => (
   <StaticQuery
     query={graphql`
       query MainLayoutQuery {
+        allMarkdownRemark(filter: { fields: { type: { eq: "article" } } }) {
+          categoriesGroup: group(field: frontmatter___category) {
+            fieldValue
+            totalCount
+          }
+          keywordsGroup: group(field: frontmatter___keywords) {
+            fieldValue
+            totalCount
+          }
+        }
         site {
           siteMetadata {
             data {
