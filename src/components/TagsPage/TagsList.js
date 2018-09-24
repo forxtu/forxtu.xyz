@@ -5,10 +5,15 @@ import styled from 'styled-components'
 import { uniq } from 'ramda'
 
 import { pushTagsToList } from '../../state/ducks/fetch/actions'
+import { fetchTags } from '../helpers/fetchTags'
 
+import HLayout from '../shared/layouts/HLayout'
+import flexJustifyCenter from '../styles/mixins/flexJustifyCenter'
 import TagsListItem from './TagsListItem'
 
-const ListWrapper = styled.ul`
+const Layout = styled(HLayout)`
+  ${flexJustifyCenter};
+  flex-wrap: wrap;
 `
 
 class TagsList extends Component {
@@ -24,43 +29,28 @@ class TagsList extends Component {
     pushTagsToList: (x) => x
   }
 
-  componentDidMount() {
-    // const tagsData = this.splitByComa(this.getAllInOneArray);
-    // const tagsData = this.result();
-    this.fetchAndPushTags();
-    // this.props.pushTagsToList(uniq(tagsData));
-  }
-
-  getAllInOneArray = (arr) => arr.reduce(( acc, val ) => acc.concat(val), []);
-    
-  // splitByComa(callback) {
-  //   const arrayOfTags = [];
-  //   this.props.allTags.map(tag => {
-  //     arrayOfTags.push(tag.fieldValue.split(`, `))
-  //   })
-  //   return callback(arrayOfTags);
+  // componentDidMount() {
+  //   this.fetchAndPushTags();
   // }
 
-  splitByComa() {
-    const arrayOfTags = [];
-    this.props.allTags.map(tag => {
-      arrayOfTags.push(tag.fieldValue.split(`, `))
-    });
-    return arrayOfTags;
-  }
+  // setTagsInArray() {
+  //   return this.props.allTags
+  //     .map(tag => tag.fieldValue.split(`, `))
+  //     .reduce((acc, val) => acc.concat(val), [])
+  // }
 
-  async fetchAndPushTags() {
-    const splittedByComa = await this.splitByComa();
-    const tagsData = await this.getAllInOneArray(splittedByComa);
-    this.props.pushTagsToList(uniq(tagsData));
-  }
+  // async fetchAndPushTags() {
+  //   const arrayOfTags = await this.setTagsInArray();
+  //   await this.props.pushTagsToList(uniq(arrayOfTags));
+  // }
 
   render() {
-    const { listOfTags} = this.props;
+    // const { listOfTags } = this.props;
+    const listOfTags = uniq(fetchTags(this.props.allTags));
     return(
-      <ListWrapper>
+      <Layout>
         {listOfTags.map(tag => <TagsListItem key={tag} tag={tag} />)}
-      </ListWrapper>
+      </Layout>
     )
   }
 }
