@@ -8,10 +8,22 @@ export default CategoriesPage
 // Moving it anywhere else results in an error.
 export const query = graphql`
   query CategoriesPageQuery {
-    allMarkdownRemark(limit: 2000) {
+    allMarkdownRemark(
+      limit: 2000
+      filter: { fields: { type: { eq: "article" } } }
+    ) {
       group(field: frontmatter___category) {
         fieldValue
         totalCount
+        edges {
+          node {
+            frontmatter {
+              image {
+                relativePath
+              }
+            }
+          }
+        }
       }
     }
     site {
