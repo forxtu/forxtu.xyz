@@ -6,6 +6,8 @@ import styled from 'styled-components'
 import screenfull from 'screenfull'
 
 import {
+  FiHome,
+  FiList,
   FiBookmark,
   FiTag,
   FiMaximize,
@@ -59,6 +61,12 @@ class SiteActionBar extends Component {
     return (
       <Layout spacing="small">
         <ActionBarGroup>
+          <ActionBarButtonLink to={`/`} title={`home`}>
+            <FiHome />
+          </ActionBarButtonLink>
+          <ActionBarButtonLink to={`/articles`} title={`articles`}>
+            <FiList />
+          </ActionBarButtonLink>
           <ActionBarButtonLink to={`/categories`} title={`categories`}>
             <FiBookmark />
           </ActionBarButtonLink>

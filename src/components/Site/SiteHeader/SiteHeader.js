@@ -32,6 +32,7 @@ const NavMoreCategoryLink = styled(NavCategoryLink)`
   ${api({
     baseline: scope`s:smallprint`
   })};
+  font-weight: 700;
 `
 
 const SiteHeader = ({ categoriesGroup }) => {

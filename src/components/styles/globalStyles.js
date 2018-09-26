@@ -37,7 +37,6 @@ const globalStyles = api => () =>
       overflow-y: scroll;
       overflow-x: hidden;
       position: relative;
-      ${insetBorder(api)};
     }
 
     body {
