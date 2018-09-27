@@ -11,11 +11,14 @@ const OrderedList = styled(UnorderedList)`
     position: absolute;
     text-align: center;
     ${api({
-      color: `c:textInverted`,
+      color: `c:text`,
       width: scope`1ru`,
       left: scope`-1ru`,
-      top: 0,
+      top: 0
     })};
+  }
+  li:before {
+    content: none;
   }
 `
 

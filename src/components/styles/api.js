@@ -64,12 +64,24 @@ const config = {
       veryLightGrey: `#f6f5f3`,
       red: `#EA421B`,
       green: `#4fc08d`,
+      lowGreen: `#2ee59d66`,
+
+      lightThemeGrey: `#FAFAFA`,
       // Aliases
       // - Default
+      backgroundMain: `c:white`,
+      backgroundSides: `c:lightThemeGrey`,
       backgroundStart: `c:white`,
       backgroundStop: `c:white`,
       text: `c:black`,
+      contentText: `c:semiGrey`,
+      title: `c:black`,
+      buttonBg: `c:white`,
+      buttonC: `c:black`,
+      borderColor: `c:grey`,
+      buttonShadow: `c:lowGreen`,
       highlight: `c:green`,
+      greyHover: `c:veryLightGrey`,
       active: `c:darkGrey`,
       disabled: `c:offWhite`,
       // - Inverted
@@ -77,8 +89,7 @@ const config = {
       backgroundInvertedEnd: `c:black`,
       textInverted: `c:white`,
       activeInverted: `c:darkGrey`,
-      highlightInverted: `c:highlight`,
-      borderColor: `c:backgroundStart`
+      highlightInverted: `c:highlight`
     },
     font: {
       // title: `Berkshire Swash, cursive`,

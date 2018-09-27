@@ -3,12 +3,15 @@ import styled from 'styled-components'
 
 const Table = styled.table`
   width: 100%;
+  ${api({
+    color: `c:text`
+  })};
 
   thead {
     ${api({
-      background: `c:backgroundInvertedStart`,
-      color: `c:textInverted`,
-      borderColor: `c:textInverted`,
+      background: `c:backgroundSides`,
+      color: `c:text`,
+      borderColor: `c:borderColor`
     })};
   }
 

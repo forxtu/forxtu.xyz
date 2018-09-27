@@ -1,9 +1,9 @@
-import { scope } from 'cssapi'
+import { api, scope } from 'cssapi'
 import Img from 'gatsby-image'
 import PropTypes from 'prop-types'
 import React from 'react'
 import styled from 'styled-components'
-import api from '../../styles/api'
+// import api from '../../styles/api'
 import defaultBorder from '../../styles/mixins/defaultBorder'
 import VLayout from '../layouts/VLayout'
 import TitlePrimary from '../titles/TitlePrimary'
@@ -16,11 +16,14 @@ export const Body = styled(VLayout)`
   })};
 `
 
-export const NavWrapper = styled.div``
+export const NavWrapper = styled.div`
+  ${api({
+    color: `c:text`
+  })};
+`
 
 const PageTitle = styled(TitlePrimary)`
   text-align: center;
-  ${defaultBorder([`top`, `bottom`])};
   ${api({
     paddingV: scope`1ru`
   })};

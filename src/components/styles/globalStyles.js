@@ -42,9 +42,7 @@ const globalStyles = api => () =>
     body {
       position:relative;
       z-index: 10;
-      ${api({
-        background: `g:background`
-      })}
+      transition: .3s;
     }
 
     /* ---------------------------------------------------------------------- */
@@ -90,10 +88,6 @@ const globalStyles = api => () =>
       padding: 0;
       max-width: 60em;
       letter-spacing: 0.6px;
-      ${api({
-        // baseline: scope`s:body`,
-        color: `c:semiGrey`
-      })}
       line-height: 1.7 !important;
       font-size: 19px !important;
     }
@@ -151,7 +145,6 @@ const globalStyles = api => () =>
     */
     .gatsby-highlight {
       margin: 0;
-      background: red;
       overflow: auto;
 
       ${api({

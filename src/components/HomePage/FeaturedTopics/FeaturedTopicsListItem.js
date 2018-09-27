@@ -17,9 +17,8 @@ import spaceChildrenV from '../../styles/mixins/spaceChildrenV'
 import ArticleFooterMeta from '../../shared/ArticleFooterMeta'
 import ArticleHeadMeta from '../../shared/ArticleHeadMeta'
 
-// const Layout = styled.div`
+const ArticleContentText = styled.div``
 
-// `
 const Layout = styled.div`
   :first-child {
     ${spaceChildrenV([`1ru`, `1ru`, `1ru`])};
@@ -40,6 +39,12 @@ const Layout = styled.div`
       flex: [`0 0 100%`, `0 0 100%`, `0 0 33.3%`]
     })};
   }
+
+  ${ArticleContentText} {
+    ${api({
+      color: `c:contentText`
+    })};
+  }
 `
 
 const FeaturedTopicsListItem = ({ article, index }) => {
@@ -54,7 +59,7 @@ const FeaturedTopicsListItem = ({ article, index }) => {
           <TitleSecondary>{title}</TitleSecondary>
         </TextLink>
         <ArticleHeadMeta article={article} />
-        <p>{article.excerpt}</p>
+        <ArticleContentText>{article.excerpt}</ArticleContentText>
         <ArticleFooterMeta article={article} />
       </VLayout>
     </Layout>

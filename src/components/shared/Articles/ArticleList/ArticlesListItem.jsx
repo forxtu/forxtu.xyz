@@ -17,6 +17,8 @@ import spaceChildrenV from '../../../styles/mixins/spaceChildrenV'
 import ArticleFooterMeta from '../../ArticleFooterMeta'
 import ArticleHeadMeta from '../../ArticleHeadMeta'
 
+const ArticleContentText = styled.p``
+
 const Layout = styled.div`
   display: flex;
   ${api({
@@ -30,6 +32,12 @@ const Layout = styled.div`
   > * :first-child {
     ${api({
       flex: [`0 0 100%`, `0 0 100%`, `0 0 33.3%`]
+    })};
+  }
+
+  ${ArticleContentText} {
+    ${api({
+      color: `c:contentText`
     })};
   }
 `
@@ -46,7 +54,7 @@ const ArticlesListItem = ({ article }) => {
           <TitleSecondary>{title}</TitleSecondary>
         </TextLink>
         <ArticleHeadMeta article={article} />
-        <p>{article.excerpt}</p>
+        <ArticleContentText>{article.excerpt}</ArticleContentText>
         <ArticleFooterMeta article={article} />
       </VLayout>
     </Layout>

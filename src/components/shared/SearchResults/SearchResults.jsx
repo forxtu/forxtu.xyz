@@ -1,10 +1,14 @@
 import PropTypes from 'prop-types'
 import React from 'react'
+import { api } from 'cssapi'
 import styled from 'styled-components'
 import Articles from '../../shared/Articles/Articles'
 
 const Meta = styled.header`
   text-align: center;
+  ${api({
+    color: `c:text`
+  })};
 `
 
 const SearchResults = ({ articles, title }) => (
@@ -20,11 +24,11 @@ const SearchResults = ({ articles, title }) => (
 
 SearchResults.propTypes = {
   articles: PropTypes.array,
-  title: PropTypes.array.isRequired,
+  title: PropTypes.array.isRequired
 }
 
 SearchResults.defaultProps = {
-  articles: [],
+  articles: []
 }
 
 export default SearchResults

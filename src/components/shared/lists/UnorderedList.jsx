@@ -3,10 +3,11 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import elementBorder from '../../styles/mixins/elementBorder'
 import spaceChildrenV from '../../styles/mixins/spaceChildrenV'
+import flexAlignCenter from './../../styles/mixins/flexAlignCenter'
 
 const scaleMap = {
   default: `body`,
-  small: `smallprint`,
+  small: `smallprint`
 }
 
 const UnorderedList = styled.ul`
@@ -15,22 +16,24 @@ const UnorderedList = styled.ul`
   ${p =>
     api({
       baseline: scope`s:${scaleMap[p.size]} 1`,
-      paddingLeft: scope`1ru`,
+      paddingLeft: scope`1ru`
     })(p)};
 
   li {
+    ${flexAlignCenter};
     position: relative;
     list-style: none;
     ${api({
-      paddingLeft: scope`0.5ru`,
+      color: `c:text`
     })};
 
     &::before {
       content: '';
       position: absolute;
+      border-radius: 50%;
       ${api({
         left: scope`-1ru`,
-        height: scope`1ru`,
+        height: scope`0.222ru`
       })};
       ${elementBorder()};
     }
@@ -38,11 +41,11 @@ const UnorderedList = styled.ul`
 `
 
 UnorderedList.propTypes = {
-  size: PropTypes.string,
+  size: PropTypes.string
 }
 
 UnorderedList.defaultProps = {
-  size: `default`,
+  size: `default`
 }
 
 export default UnorderedList

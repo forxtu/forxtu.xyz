@@ -62,23 +62,36 @@ const config = {
       grey: `#a0a0a0`,
       lightGrey: `#E4E4E4`,
       veryLightGrey: `#f6f5f3`,
-      red: `#EA421B`,
+      red: `#de4c4a`,
+      lowRed: `#de4c4a7a`,
       green: `#4fc08d`,
+
+      darkThemeBlack: `#1F1F1F`,
+      darkThemeLowBlack: `#282828`,
+      darkThemeLightGrey: `#E2E2E2`,
       // Aliases
       // - Default
+      backgroundMain: `c:darkThemeBlack`,
+      backgroundSides: `c:darkThemeLowBlack`,
       backgroundStart: `c:white`,
       backgroundStop: `c:white`,
-      text: `c:black`,
+      text: `c:darkThemeLightGrey`,
+      contentText: `c:grey`,
+      title: `c:white`,
+      buttonBg: `c:darkThemeBlack`,
+      buttonC: `c:white`,
+      buttonShadow: `c:lowRed`,
+      borderColor: `c:darkThemeLowBlack`,
       highlight: `c:red`,
-      active: `c:darkGrey`,
+      greyHover: `c:offBlack`,
+      active: `c:veryLightGrey`,
       disabled: `c:offWhite`,
       // - Inverted
       backgroundInvertedStart: `c:offBlack`,
       backgroundInvertedEnd: `c:black`,
       textInverted: `c:white`,
       activeInverted: `c:darkGrey`,
-      highlightInverted: `c:highlight`,
-      borderColor: `c:backgroundStart`
+      highlightInverted: `c:highlight`
     },
     font: {
       // title: `Berkshire Swash, cursive`,

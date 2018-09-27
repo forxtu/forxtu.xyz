@@ -13,6 +13,7 @@ export const LayoutNext = styled.div``
 
 const Layout = styled.nav`
   justify-content: space-between;
+
   ${flexHorizontal};
 
   ${LayoutNext} {

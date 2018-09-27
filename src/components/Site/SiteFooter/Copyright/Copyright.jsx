@@ -11,6 +11,7 @@ const Layout = styled.span`
   text-align: center;
   justify-content: center;
   ${api({
+    color: `c:text`,
     padding: [`0.5ru 2ru`, `1ru 2ru`]
   })};
 `

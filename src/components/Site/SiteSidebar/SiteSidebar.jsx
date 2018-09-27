@@ -24,13 +24,14 @@ const Layout = styled(VLayout)`
   padding: 0 20px 20px 20px !important;
   justify-content: space-between;
   height: 100vh;
-  border-right: 2px solid #f6f5f3;
   width: 320px;
   transition: 0.3s;
   transform: ${props =>
     props.isSidebarOpen ? `translateX(0)` : `translateX(-320px)`};
   ${api({
-    padding: scope`0 0 0.7ru`
+    padding: scope`0 0 0.7ru`,
+    backgroundColor: `c:backgroundSides`,
+    borderRight: `2px solid c:backgroundSides`
   })};
 
   ${Header} {

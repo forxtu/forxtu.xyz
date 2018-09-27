@@ -16,7 +16,7 @@ import VLayout from '../layouts/VLayout'
 
 const TopHead = styled.span`
   ${api({
-    color: `c:black`
+    color: `c:text`
   })};
 `
 const BotHead = styled.span`
@@ -27,7 +27,7 @@ const BotHead = styled.span`
   })};
   svg {
     ${api({
-      color: `c:black`,
+      color: `c:text`,
       marginLeft: scope`0.5ru`,
       marginRight: scope`0.5ru`,
       baseline: scope`s:smallprint`

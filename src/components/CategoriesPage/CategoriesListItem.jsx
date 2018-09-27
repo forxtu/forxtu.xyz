@@ -11,7 +11,8 @@ import ButtonLink from '../shared/links/ButtonLink'
 
 const LinkWrapper = styled(ButtonLink)`
   ${api({
-    baseline: scope`s:smallprint`
+    baseline: scope`s:smallprint`,
+    backgroundColor: `c:backgroundSides`
   })};
   margin: 10px;
   text-transform: capitalize;

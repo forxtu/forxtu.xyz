@@ -3,7 +3,7 @@ import { css } from 'styled-components'
 
 const elementBorder = api => () => css`
   ${api({
-    borderLeft: scope`1ru solid c:text`,
+    borderLeft: scope`0.2ru solid c:text`
   })};
 `
 

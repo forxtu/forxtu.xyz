@@ -11,9 +11,9 @@ const ListItemWrapper = styled.li`
 `
 
 const ListItemLink = styled(ButtonLink)`
-  ${linkProps(`c:text`, `c:highlight`)};
   ${api({
-    baseline: scope`s:smallprint`
+    baseline: scope`s:smallprint`,
+    backgroundColor: `c:backgroundSides`
   })};
   text-transform: capitalize;
   margin: 10px;

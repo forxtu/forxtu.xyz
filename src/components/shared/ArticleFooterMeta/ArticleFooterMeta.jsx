@@ -33,6 +33,7 @@ const CategoryLink = styled(TextLink)`
 const CategoryWrapper = styled.div`
   ${flexAlignCenter};
   ${api({
+    color: `c:text`,
     marginRight: scope`0.5ru`,
     baseline: scope`s:mediumprint`
   })};
@@ -41,6 +42,7 @@ const CategoryWrapper = styled.div`
 const TagWrapper = styled(HList)`
   ${flexAlignCenter};
   ${api({
+    color: `c:text`,
     marginRight: scope`0.5ru`,
     baseline: scope`s:mediumprint`
   })};

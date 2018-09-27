@@ -10,4 +10,7 @@ export default styled.div`
   justify-content: center;
   cursor: pointer;
   margin-top: 10px;
+  ${api({
+    color: `c:text`
+  })}
 `

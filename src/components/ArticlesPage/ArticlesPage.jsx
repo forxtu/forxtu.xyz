@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
+import { api } from 'cssapi'
 import styled from 'styled-components'
 import { pagination, pluralise } from '../helpers/formatting'
 import { markdownItemNodes } from '../helpers/markdown'
@@ -14,6 +15,9 @@ import Page from '../shared/Page'
 
 const Meta = styled.header`
   text-align: center;
+  ${api({
+    color: `c:text`
+  })};
 `
 
 const ArticlesPage = ({ data, pageContext }) => {

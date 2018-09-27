@@ -18,6 +18,7 @@ import UnorderedList from './lists/UnorderedList'
 import ContentTitlePrimary from './titles/ContentTitlePrimary'
 import ContentTitleSecondary from './titles/ContentTitleSecondary'
 import ContentTitleTertiary from './titles/ContentTitleTertiary'
+import ContentTitleH4 from './titles/ContentTitleH4'
 
 const hrefIsBackref = test(/^#fnref/)
 const isClassedAsFootnoteRef = test(/footnote-ref/)
@@ -70,6 +71,7 @@ const renderAst = (theme, ast) =>
       h1: ContentTitlePrimary,
       h2: ContentTitleSecondary,
       h3: ContentTitleTertiary,
+      h4: ContentTitleH4,
       ol: resolveOl(theme),
       ul: UnorderedList,
       blockquote: Blockquote,
@@ -87,11 +89,15 @@ const PageText = styled.div`
   }
 
   div > p:first-of-type {
-    font-weight: bold;
-
     ${api({
       baseline: scope`s:lede`
     })};
+  }
+
+  p {
+    ${api({
+      color: `c:contentText`
+    })}
   }
 
   ${Blockquote}, ${OrderedList}, ${UnorderedList} {
