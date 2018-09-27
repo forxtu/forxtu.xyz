@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
+import { api } from 'cssapi'
 import { connect } from 'react-redux'
 import { array, func } from 'prop-types'
 import styled from 'styled-components'
@@ -16,6 +17,17 @@ const Layout = styled(HLayout)`
   flex-wrap: wrap;
 `
 
+const FilterInput = styled.input`
+  border: none;
+  padding-bottom: 15px;
+  outline: none;
+  ${api({
+    color: `c:text`,
+    backgroundColor: `c:backgroundMain`,
+    borderBottom: `1px solid c:borderColor`
+  })}
+`
+
 class TagsList extends Component {
   static propTypes = {
     allTags: array.isRequired,
@@ -29,28 +41,38 @@ class TagsList extends Component {
     pushTagsToList: (x) => x
   }
 
-  // componentDidMount() {
-  //   this.fetchAndPushTags();
-  // }
+  constructor(props) {
+    super(props);
 
-  // setTagsInArray() {
-  //   return this.props.allTags
-  //     .map(tag => tag.fieldValue.split(`, `))
-  //     .reduce((acc, val) => acc.concat(val), [])
-  // }
+    this.filterList = this.filterList.bind(this);
+  }
+  
+  state = {
+    initialItemsState: uniq(fetchTags(this.props.allTags)),
+    items: []
+  }
 
-  // async fetchAndPushTags() {
-  //   const arrayOfTags = await this.setTagsInArray();
-  //   await this.props.pushTagsToList(uniq(arrayOfTags));
-  // }
+  componentDidMount() {
+    this.setState({items: this.state.initialItemsState})
+  }
+
+  filterList(e) {
+    let updatedList = this.state.initialItemsState;
+    updatedList = updatedList.filter((item) => 
+      item.toLowerCase().indexOf(e.target.value.toLowerCase()) !== -1);
+    this.setState({items: updatedList});
+  }
 
   render() {
-    // const { listOfTags } = this.props;
-    const listOfTags = uniq(fetchTags(this.props.allTags));
+    // const listOfTags = uniq(fetchTags(this.props.allTags));
     return(
-      <Layout>
-        {listOfTags.map(tag => <TagsListItem key={tag} tag={tag} />)}
-      </Layout>
+      <Fragment>
+        <label htmlFor="filterInput"></label>
+        <FilterInput id="filterInput" type="text" placeholder="Type something..." onChange={this.filterList}/>
+        <Layout>
+          {this.state.items.map(tag => <TagsListItem key={tag} tag={tag} />)}
+        </Layout>
+      </Fragment>
     )
   }
 }
