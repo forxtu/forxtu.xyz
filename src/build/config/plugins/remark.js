@@ -24,13 +24,13 @@ module.exports = ({ media, structure }) => ({
       // resolutions
       images(media.images),
       // Embed code from a 'code' directory via reference
-      embedSnippet(structure),
+      // embedSnippet(structure),
       // Highlighting for code blocks
       prismjs(),
       // Open code from a 'code' directory in a REPL
-      codeRepls(structure),
+      // codeRepls(structure),
       // Small embellishments to text
-      smartypants(),
-    ],
-  },
+      smartypants()
+    ]
+  }
 })

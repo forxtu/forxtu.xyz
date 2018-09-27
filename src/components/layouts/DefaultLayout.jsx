@@ -15,14 +15,15 @@ import { setCurrentTheme } from './../../state/ducks/global/actions'
 
 const reduxStore = configureStore()
 
-const { body } = document
-
 class DefaultLayout extends Component {
   render() {
     const { data, children, currentTheme } = this.props
-    currentTheme === theme
-      ? (body.style.background = `#fff`)
-      : (body.style.background = `#1F1F1F`)
+    if (typeof document !== `undefined`) {
+      const { body } = document
+      this.props.currentTheme === theme
+        ? (body.style.background = `#fff`)
+        : (body.style.background = `#1F1F1F`)
+    }
     return (
       <Provider store={reduxStore}>
         <ThemeProvider theme={currentTheme}>

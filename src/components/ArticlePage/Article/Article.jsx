@@ -20,10 +20,12 @@ class Article extends Component {
     const { id } = allData.markdownRemark
     const { title, slug } = allData.markdownRemark.fields
     const disqusShortname = `forxtu`
-    const disqusConfig = {
-      url: `${location.origin}${slug}`,
-      identifier: id,
-      title
+    if (typeof location !== `undefined`) {
+      this.disqusConfig = {
+        url: `${location.origin}${slug}`,
+        identifier: id,
+        title
+      }
     }
     return (
       <Fragment>
@@ -31,7 +33,10 @@ class Article extends Component {
         <MarkdownContent htmlAst={article.htmlAst} />
         <ArticleFooterMeta article={article} />
         {nav && <NavWrapper>{nav}</NavWrapper>}
-        <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
+        <DiscussionEmbed
+          shortname={disqusShortname}
+          config={this.disqusConfig}
+        />
       </Fragment>
     )
   }
