@@ -43,6 +43,12 @@ the following syntax within the markdown (note the backticks):
 
 `embed:example.js`
 
+```js
+function(arg1) {
+  console.log(arg1);
+}
+```
+
 #### REPLs
 
 There is also a special syntax for opening JavaScript code in a REPL of your

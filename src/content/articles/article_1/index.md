@@ -5,9 +5,16 @@ description:
   Sed nisi dolor, fringilla et consectetur eu, viverra vulputate felis. Ut est ex, ornare vitae dictum quis, egestas et est. Nam rhoncus purus eu justo feugiat, a venenatis enim ultricies. Mauris tristique elementum leo a viverra. Ut placerat, ex nec vestibulum iaculis, nibh ante sollicitudin elit, non aliquet nunc neque ac sapien. Aenean iaculis vulputate facilisis. Suspendisse elit purus, iaculis.
 category: Programming
 keywords: javascript
-tags: ['vuejs', 'react']
-image: ./images/main.jpg
+image: ./images/js.png
 ---
+
+# My first blog post
+
+```js
+function test() {
+  console.log('test')
+}
+```
 
 Feugiat adipisci salutandi mei eu, eu vix purto vero oratio. Eam justo viris
 iudicabit te, sea dico esse tritani ea. Sed ad epicurei splendide. Ut constituam
