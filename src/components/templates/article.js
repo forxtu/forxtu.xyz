@@ -12,6 +12,7 @@ export const query = graphql`
   ) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       htmlAst
+      id
       wordCount {
         words
       }
@@ -32,6 +33,7 @@ export const query = graphql`
         date(formatString: $dateFormat)
         category
         author
+        slug
         metadata {
           description
           title
