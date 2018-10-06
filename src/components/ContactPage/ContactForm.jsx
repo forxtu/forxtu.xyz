@@ -55,7 +55,7 @@ const Submit = styled.button`
   margin: 0;
   min-width: 150px;
 
-  :hover {
+  &:hover {
     transform: translateY(-7px);
     ${api({
       backgroundColor: `c:highlight`,

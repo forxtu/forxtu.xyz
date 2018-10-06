@@ -1,11 +1,10 @@
 import { mixin } from 'cssapi'
 import { css } from 'styled-components'
 
-const linkProps = api => (defaultColor = `red`, highlightColor = `blue`) => css`
+const linkProps = api => (defaultColor = `#333`, highlightColor = `#4fc08d`) => css`
   ${api({
     color: defaultColor
   })};
-  color: inherit;
   text-decoration: none;
   transition: all 0.25s ease-in-out;
   cursor: pointer;
@@ -15,6 +14,13 @@ const linkProps = api => (defaultColor = `red`, highlightColor = `blue`) => css`
   &:active {
     ${api({
       color: defaultColor
+    })};
+  }
+
+  &:hover {
+    transition: all 0.25s ease-in-out;
+    ${api({
+      color: highlightColor
     })};
   }
 

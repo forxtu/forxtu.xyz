@@ -21,6 +21,7 @@ const Layout = styled(VLayout)`
   position: fixed;
   display: flex;
   left: 0;
+  top: 0;
   padding: 0 20px 20px 20px !important;
   justify-content: space-between;
   height: 100vh;
