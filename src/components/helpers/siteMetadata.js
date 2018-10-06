@@ -50,6 +50,7 @@ export const tagsResourceTitle = resourceTitle(`tags`)
 
 export const homePageMetadata = pageMetadata(`home`)
 export const aboutPageMetadata = pageMetadata(`about`)
+export const contactPageMetadata = pageMetadata(`contact`)
 export const articlesPageMetadata = pageMetadata(`articles`)
 export const projectsPageMetadata = pageMetadata(`projects`)
 export const tagPageMetadata = pageMetadata(`tag`)

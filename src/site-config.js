@@ -39,6 +39,11 @@ module.exports = {
       description: `The about page of the site`,
       keywords: `about`
     },
+    contact: {
+      title: `Contact Page / FORXTU`,
+      description: `The contact page of the site`,
+      keywords: `contact`
+    },
     articles: {
       title: `Articles Page / FORXTU`,
       description: `The Articles`,
@@ -187,6 +192,6 @@ module.exports = {
   // Internal
   cli: {
     // Emojo used to prefix messages reported during build
-    emoji: `💀`
+    emoji: `FX2 - `
   }
 }
