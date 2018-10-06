@@ -4,19 +4,21 @@ import { test } from 'ramda'
 import React from 'react'
 import styled from 'styled-components'
 import { isHomePage } from '../../../../helpers/paths'
-import TextLink from '../../../../shared/links/TextLink'
+// import TextLink from '../../../../shared/links/TextLink'
+import ContentLink from '../../../../shared/links/ContentLink'
 import linkProps from '../../../../styles/mixins/linkProps'
 
 const articlesIsActive = (match, location) =>
   match || test(/(categories|tags)/, location.pathname)
 
-const Link = styled(TextLink).attrs({
+const Link = styled(ContentLink).attrs({
   activeClassName: `isActive`
 })`
   ${linkProps(`c:text`, `c:highlight`)};
   background: transparent;
   letter-spacing: 0.5px;
   z-index: 2;
+  margin: 0 10px;
 
   &.isActive {
     ${api({

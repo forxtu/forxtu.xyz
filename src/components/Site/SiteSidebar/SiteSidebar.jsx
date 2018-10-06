@@ -34,6 +34,10 @@ const Layout = styled(VLayout)`
     borderRight: `2px solid c:backgroundSides`
   })};
 
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
   ${Header} {
     justify-content: center;
     ${api({
@@ -58,12 +62,12 @@ const SiteSidebar = ({
     </SiteSidebarToggler>
     <Header>
       <SiteTitle title={title} isSidebarOpen={isSidebarOpen} />
-      <SiteNav pages={pages} />
     </Header>
     <Wrapper>
       <SiteTags tags={tags} />
     </Wrapper>
     <Wrapper>
+      <SiteNav pages={pages} />
       <SiteSocial />
     </Wrapper>
   </Layout>

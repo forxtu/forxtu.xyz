@@ -34,6 +34,12 @@ const Layout = styled.div`
     minWidth: 300
   })};
 
+  @media screen and (max-width: 767px) {
+    left: 0;
+    padding: 0 20px;
+    width: calc(100vw - 75px);
+  }
+
   ${Header} {
     display: flex;
   }
