@@ -1,9 +1,9 @@
 ---
-title: "Ne Amet Adhuc Sed Ei Cum Ludus Graeci Animal Malis Sensibus"
-date: "2017-04-28"
-slug: "projec"
-description: Sed nisi dolor, fringilla et consectetur eu, viverra vulputate felis. Ut est ex, ornare vitae dictum quis, egestas et est. Nam rhoncus purus eu justo feugiat, a venenatis enim ultricies. Mauris tristique elementum leo a viverra. Ut placerat, ex nec vestibulum iaculis, nibh ante sollicitudin elit, non aliquet nunc neque ac sapien. Aenean iaculis vulputate facilisis. Suspendisse elit purus, iaculis.
-keywords: keyword 5, keyword 8, keyword 9
+title: 'forxtu.xyz - a personal blog site'
+date: '2018-09-19'
+slug: 'forxtu-project'
+description: Personal blog site about programming, lifestyle and everything
+keywords: coding, travel, lifestyle
 image: ./images/main.jpg
 ---
 
