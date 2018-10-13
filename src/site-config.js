@@ -83,7 +83,7 @@ module.exports = {
   seo: {
     // Your Google Tracking ID, in the form: UA-000000-0
     // If you leave undefined, the tracking code will not be added
-    googleTrackingID: undefined
+    googleTrackingID: `UA-79963580-3`
   },
 
   // ---------------------------------------------------------------------------
@@ -115,7 +115,7 @@ module.exports = {
       },
       about: {
         // Page title
-        title: `Welcome To The About Page`,
+        title: `About me and project`,
         // Title used for nav
         navTitle: `About`,
         // Path used in URL
