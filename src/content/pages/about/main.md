@@ -1,11 +1,11 @@
 ---
 title: 'About'
 slug: 'about'
-? description
+description: 'About me'
 keywords: about, about us
-image: './images/main.jpg'
+# image: './images/main.jpg'
 ---
 
-This is a starter for [Gatsby](https://www.gatsbyjs.org/), a static website
-builder. For more information, see the [home page](/), or the project's
-[Github repository]()
+Hi! I'm Dennis, a web front-end developer. Currently I work for [ABB](https://abb.com) in Krakow, Poland. I write simple and effective tutorials and topics about web development at [forxtu.xyz](https://forxtu.xyz) . Also I write about my life, travels and other cool stuff.
+
+I wanna give you just free, quality content. All support is highly appreciated!
