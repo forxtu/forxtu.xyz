@@ -38,6 +38,11 @@ const html = ({
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+        {/* google verification */}
+        <meta
+          name="google-site-verification"
+          content="2biwpjGwZxaPFXxe7eq-88Vwlf1QRbRZ4VMfd68BVs4"
+        />
 
         <link
           href="https://fonts.googleapis.com/css?family=Limelight|Montserrat:300,400|Yeseva+One|Bentham|Lora:400,700&amp;subset=cyrillic"
