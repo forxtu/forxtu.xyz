@@ -4,8 +4,8 @@ author: 'Dennis Merkulov'
 slug: 'js-functions'
 description: Well explained declaration if functions in JavaScript
 category: Programming
-keywords: javascript, tutorial, entry-lvl
-image: ./images/js.png
+keywords: javascript, documentation, entry-lvl
+image: ./images/js-functions.png
 ---
 
 # How to declare a function in JavaScript
