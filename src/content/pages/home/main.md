@@ -5,4 +5,4 @@ description: A personal blog website about programming and lifestyle
 keywords: blog, forxtu, programming, lifestyle
 ---
 
-Hi! Great to see you here!
+Hi! I'm Dennis, a web developer. On this site you can find different manuals and tips about web development. Enjoy!
