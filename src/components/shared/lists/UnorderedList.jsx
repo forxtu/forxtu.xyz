@@ -20,7 +20,6 @@ const UnorderedList = styled.ul`
     })(p)};
 
   li {
-    ${flexAlignCenter};
     position: relative;
     list-style: none;
     ${api({
@@ -33,6 +32,7 @@ const UnorderedList = styled.ul`
       border-radius: 50%;
       ${api({
         left: scope`-1ru`,
+        top: `10px`,
         height: scope`0.222ru`
       })};
       ${elementBorder()};
