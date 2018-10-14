@@ -37,7 +37,7 @@ const BotHead = styled.span`
 
 const ArticleHeadMeta = ({ article }) => (
   <VLayout spacing="none">
-    <TopHead>{frontmatterAuthor(article)}</TopHead>
+    {/* <TopHead>{frontmatterAuthor(article)}</TopHead> */}
     <BotHead>
       {frontmatterDate(article)} <FiStar /> {timeToRead(article)} min read
     </BotHead>
