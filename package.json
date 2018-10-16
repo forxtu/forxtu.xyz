@@ -1,12 +1,16 @@
 {
-  "name": "gatsby-starter-skeleton",
-  "description": "Gatsby Skeleton Starter",
+  "name": "forxtu.xyz",
+  "description": "Hi my name is Dennis Merkulov - forxtu.xyz is a personal blog about programming and my lifestyle.",
   "version": "1.0.0",
-  "author": "Pedr Browne <info@undistraction.com>",
+  "author": "Dennis Merkulov <forxtu@gmail.com>",
   "keywords": [
-    "gatsby",
-    "styled-components",
-    "cssapi"
+    "forxtu",
+    "f2x",
+    "programming",
+    "frontend",
+    "javascript",
+    "web",
+    "react"
   ],
   "license": "MIT",
   "main": "n/a",

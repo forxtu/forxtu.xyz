@@ -31,18 +31,18 @@ module.exports = {
   metadata: {
     home: {
       title: `Home Page / FORXTU`,
-      description: `The home page of the site`,
-      keywords: `home`
+      description: `Dennis Merkulov. forxtu.xyz - a personal blog about programming and lifestyle.`,
+      keywords: `home, forxtu, programming, lifestyle`
     },
     about: {
       title: `About Page / FORXTU`,
-      description: `The about page of the site`,
-      keywords: `about`
+      description: `Hi! I'm Dennis, a web front-end developer. I write simple and effective tutorials and topics about web development. Also I write about my life, travels and other cool stuff.`,
+      keywords: `about, forxtu, programming, lifestyle`
     },
     contact: {
       title: `Contact Page / FORXTU`,
-      description: `The contact page of the site`,
-      keywords: `contact`
+      description: `Feel free to contact me! You can use this form, any social media or send me an email`,
+      keywords: `contact, forxtu, programming, lifestyle`
     },
     articles: {
       title: `Articles Page / FORXTU`,
