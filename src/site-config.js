@@ -47,7 +47,7 @@ module.exports = {
     articles: {
       title: `Articles Page / FORXTU`,
       description: `The Articles`,
-      keywords: `articles`
+      keywords: `articles, forxtu, programming, lifestyle`
     },
     projects: {
       title: `Projects Page / FORXTU`,
@@ -57,22 +57,22 @@ module.exports = {
     tag: {
       title: ` Tag `,
       description: `Resources tagged with`,
-      keywords: `tags`
+      keywords: `tags, forxtu, lifestyle`
     },
     tags: {
       title: `Tags / FORXTU`,
-      description: `Resources tags`,
-      keywords: `tags`
+      description: `Explore topics by tags! - forxtu.xyz - Dennis Merkulov`,
+      keywords: `tags, forxtu, programming, lifestyle`
     },
     category: {
       title: ` Category `,
       description: `Resources in category`,
-      keywords: `categories`
+      keywords: `categories, forxtu, lifestyle`
     },
     categories: {
       title: `Categories / FORXTU`,
-      description: `Resources categories`,
-      keywords: `categories`
+      description: `Explore topics by categires! - forxtu.xyz - Dennis Merkulov`,
+      keywords: `categories, forxtu, programming, lifestyle`
     }
   },
 

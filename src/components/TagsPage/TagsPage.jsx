@@ -24,6 +24,7 @@ const TagsPage = ({ data }) => {
   return (
     <Page title={pluralise(tagsResourceTitle(data))}>
       <Metadata {...tagsMetadata} />
+      {console.log(tagsMetadata)}
       <TagsList allTags={allTags} />
     </Page>
   )

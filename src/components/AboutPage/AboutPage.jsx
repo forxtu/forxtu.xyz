@@ -7,7 +7,7 @@ import React from 'react'
 import MarkdownContent from '../shared/MarkdownContent'
 import {
   markdownItemHTMLAst,
-  markdownItemImageSizes,
+  markdownItemImageSizes
 } from '../helpers/markdown'
 import { aboutPageMetadata, aboutPageTitle } from '../helpers/siteMetadata'
 import Metadata from '../shared/Metadata'
@@ -21,7 +21,7 @@ const AboutPage = ({ data }) => (
 )
 
 AboutPage.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired
 }
 
 export default AboutPage
